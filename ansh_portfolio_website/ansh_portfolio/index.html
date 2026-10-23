@@ -7,7 +7,14 @@
       name="description"
       content="Ansh Hudda's portfolio: software development, data analytics, and projects."
     />
+    <meta name="theme-color" content="#141714" />
     <title>Ansh Hudda | Developer Portfolio</title>
+
+    <!-- Lets the CSS hide project cards until they scroll into view (only when JS runs) -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,376 +23,353 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="Ansh Hudda home"
-        ><span class="brand-mark">A.</span><span>ANSH HUDDA</span></a
-      >
-      <button
-        class="menu-toggle"
-        id="menu-toggle"
-        aria-label="Open navigation"
-        aria-expanded="false"
-        aria-controls="site-nav"
-      >
-        <span></span><span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Projects</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact"
-          >Let's talk <span aria-hidden="true">↗</span></a
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Ansh Hudda home">
+          <span class="brand-mark" aria-hidden="true">A.</span>
+          <span>ANSH HUDDA</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
         >
-      </nav>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#work">Projects</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="hero section-wrap" id="home">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot"></span> COMPUTER SCIENCE STUDENT · MEERUT,
-            INDIA
-          </p>
-          <h1>
-            Developer with an<br /><span class="gradient-text"
-              >analytical mindset.</span
-            >
-          </h1>
-          <p class="hero-intro">
-            I'm Ansh Hudda, a CSE student exploring software development and
-            data analytics through building, experimenting, and solving
-            problems. I enjoy turning ideas into code, data into insights, and
-            complex challenges into clear, useful solutions.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work"
-              >Explore my work <span aria-hidden="true">↘</span></a
-            >
-            <a class="text-link" href="#about"
-              >A little about me <span aria-hidden="true">→</span></a
-            >
-          </div>
-
-          <div class="hero-meta">
-            <div>
-              <strong>01</strong>
-              <span>Imagine the possibilities</span>
-            </div>
-            <div>
-              <strong>02</strong>
-              <span>Experiment with code</span>
-            </div>
-            <div>
-              <strong>03</strong>
-              <span>Improve with every iteration</span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="hero-art"
-          aria-label="Decorative code and data illustration"
-        >
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="art-glow"></div>
-          <div class="code-card">
-            <div class="card-top">
-              <div class="window-dots"><i></i><i></i><i></i></div>
-              <span>daily_build.java</span><span class="card-menu">•••</span>
-            </div>
-            <div class="code-lines" aria-hidden="true">
-              <p>
-                <span class="line-no">01</span><span class="purple">class</span>
-                <span class="mint">Developer</span> {
-              </p>
-              <p>
-                <span class="line-no">02</span>&nbsp;&nbsp;<span class="purple"
-                  >void</span
-                >
-                build() {
-              </p>
-              <p>
-                <span class="line-no">03</span>&nbsp;&nbsp;&nbsp;&nbsp;learn();
-              </p>
-              <p>
-                <span class="line-no">04</span
-                >&nbsp;&nbsp;&nbsp;&nbsp;solveProblems();
-              </p>
-              <p>
-                <span class="line-no">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span
-                  class="blue"
-                  >return</span
-                >
-                progress;
-              </p>
-              <p><span class="line-no">06</span>&nbsp;&nbsp;}</p>
-              <p><span class="line-no">07</span>}</p>
-            </div>
-            <div class="code-footer">
-              <span><i class="tiny-dot"></i> Always learning</span
-              ><span>UTF-8&nbsp; · &nbsp;Java</span>
-            </div>
-          </div>
-          <div class="float-chip chip-data">
-            <span class="chip-icon">▥</span
-            ><span><b>Data</b><small>Discover. Decode. Decide.</small></span>
-          </div>
-          <div class="float-chip chip-dev">
-            <span class="chip-icon">⌘</span
-            ><span
-              ><b>Development</b><small>Imagine. Code. Create.</small></span
-            >
-          </div>
-          <div class="art-caption">CURIOSITY IN. SOLUTIONS OUT.</div>
-        </div>
-        <a class="scroll-cue" href="#about"
-          ><span class="scroll-line"></span> SCROLL TO EXPLORE</a
-        >
-      </section>
-
-      <section class="about section-wrap section-pad" id="about">
-        <div class="section-label"><span>01</span> / ABOUT</div>
-        <div class="about-grid">
-          <div>
-            <h2>
-              A mind that Questions.<br /><span class="muted"
-                >A mindset that Builds.</span
-              >
-            </h2>
-            <div class="signal-container">
-              <div class="signal-dot"></div>
-              <div class="signal-dot"></div>
-              <div class="signal-dot"></div>
-            </div>
-          </div>
-          <div class="about-copy">
-            <p class="large-copy">
-              I’m a CSE student building my foundation in software engineering
-              while exploring how data and AI can turn ideas into meaningful
-              solutions.
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              COMPUTER SCIENCE STUDENT · MEERUT, INDIA
             </p>
-            <p>
-              On the software side, I’m learning Java, data structures and
-              algorithms, web technologies, and Spring Boot. On the analytics
-              side, I’m exploring Python, SQL, Pandas, NumPy, and Power BI.
+
+            <h1>
+              Developer with an<br />
+              <span class="gradient-text">analytical mindset.</span>
+            </h1>
+
+            <p class="hero-intro">
+              I'm Ansh Hudda, a CSE student exploring software development and
+              data analytics through building, experimenting, and solving
+              problems. I enjoy turning ideas into code, data into insights, and
+              complex challenges into clear, useful solutions.
             </p>
-            <p>
-              This portfolio documents what I learn, what I create, and how I
-              grow with every new challenge.
-            </p>
-            <a class="inline-link" href="#contact"
-              >Have a project in mind? <span>Let’s connect ↗</span></a
-            >
-          </div>
-        </div>
-      </section>
 
-      <section class="skills section-wrap section-pad" id="skills">
-        <div class="section-heading">
-          <div>
-            <div class="section-label"><span>02</span> / TOOLKIT</div>
-            <h2>Skills in progress<span class="accent">.</span></h2>
-          </div>
-          <p>
-            I’m focused on strong fundamentals first, then using them in real
-            projects.
-          </p>
-        </div>
-        <div class="skill-grid">
-          <article class="skill-card">
-            <div class="skill-number">01</div>
-            <div class="skill-icon">⌘</div>
-            <h3>Software development</h3>
-            <p>
-              Building programming skills, solving problems, and creating
-              applications.
-            </p>
-            <div class="tag-list">
-              <span class="highlight-skill">Java</span>
-              <span class="highlight-skill">DSA</span>
-              <span class="highlight-skill">Spring Boot</span>
-
-              <span class="highlight-skill">Git & GitHub</span>
-              <span class="highlight-skill">PostMan</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <div class="skill-number">02</div>
-            <div class="skill-icon">▥</div>
-            <h3>Data analytics</h3>
-            <p>
-              Learning to clean and analyze data, query databases, and uncover
-              meaningful insights.
-            </p>
-            <div class="tag-list">
-              <span class="highlight-skill">SQL</span>
-              <span class="highlight-skill">EXCEl</span>
-              <span class="highlight-skill">Power BI</span>
-              <span class="highlight-skill">Pandas</span>
-              <span class="highlight-skill">NumPy</span>
-            </div>
-          </article>
-          <article class="skill-card">
-            <div class="skill-number">03</div>
-            <div class="skill-icon">✳</div>
-            <h3>Web foundations</h3>
-            <p>
-              Creating accessible, responsive interfaces with a focus on clarity
-              and usability.
-            </p>
-            <div class="tag-list">
-              <span class="highlight-skill">HTML</span>
-              <span class="highlight-skill">CSS</span>
-              <span class="highlight-skill">JavaScript</span>
-              <span class="highlight-skill">Responsive UI</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="work section-wrap section-pad" id="work">
-        <div class="section-heading">
-          <div>
-            <div class="section-label"><span>03</span> / SELECTED WORK</div>
-            <h2>Projects with a purpose<span class="accent">.</span></h2>
-          </div>
-          <p>
-            A collection of projects, ideas, and lessons learned along the way.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card simple-project">
-            <div class="project-header">
-              <span class="project-category">WEB / UI</span>
-            </div>
-
-            <div class="project-body">
-              <h3>Tej Public School Website</h3>
-              <p>
-                A school website designed to make information accessible,
-                navigation simple, and the school’s identity welcoming.
-              </p>
-
-              <div class="tag-list">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-              <a
-                class="project-link"
-                href="https://github.com/huddaansh/Tej-Public-School-Demo-"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View project ↗
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">
+                Explore my work <span aria-hidden="true">↘</span>
+              </a>
+              <a class="text-link" href="#about">
+                A little about me <span aria-hidden="true">→</span>
               </a>
             </div>
-          </article>
 
-          <article class="project-card exploring-card">
-            <h3>Currently exploring</h3>
-            <p>
-              Building my skills in Python, SQL, and data visualization.
-              Projects coming soon.
-            </p>
-            <div class="progress-symbol">📊</div>
-          </article>
-
-          <article class="project-card backend-card">
-            <div class="project-header">
-              <span class="project-category">JAVA / API</span>
+            <div class="hero-meta">
+              <div><strong>01</strong><span>Imagine the possibilities</span></div>
+              <div><strong>02</strong><span>Experiment with code</span></div>
+              <div><strong>03</strong><span>Improve with every iteration</span></div>
             </div>
+          </div>
 
-            <div class="project-body">
-              <h3>Switchlyy</h3>
-              <p>
-                A Java Spring Boot application for managing feature flags and
-                controlling feature availability through REST APIs.
-              </p>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="art-glow"></div>
 
-              <div class="tag-list">
-                <span>Java</span>
-                <span>Spring Boot</span>
-                <span>PostgreSQL</span>
-                <span>REST API</span>
+            <div class="code-card">
+              <div class="card-top">
+                <div class="window-dots"><i></i><i></i><i></i></div>
+                <span>daily_build.java</span>
+                <span class="card-menu">•••</span>
               </div>
 
-              <a
-                class="project-link"
-                href="https://github.com/huddaansh/Switchlyy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View project ↗
-              </a>
+              <div class="code-lines">
+                <p><span class="line-no">01</span><span class="kw">class</span> <span class="type">Developer</span> {</p>
+                <p><span class="line-no">02</span>&nbsp;&nbsp;<span class="kw">void</span> build() {</p>
+                <p><span class="line-no">03</span>&nbsp;&nbsp;&nbsp;&nbsp;learn();</p>
+                <p><span class="line-no">04</span>&nbsp;&nbsp;&nbsp;&nbsp;solveProblems();</p>
+                <p><span class="line-no">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="flow">return</span> progress;</p>
+                <p><span class="line-no">06</span>&nbsp;&nbsp;}</p>
+                <p><span class="line-no">07</span>}</p>
+              </div>
+
+              <div class="code-footer">
+                <span><i class="tiny-dot"></i> Always learning</span>
+                <span>UTF-8 · Java</span>
+              </div>
             </div>
-          </article>
+
+            <div class="float-chip chip-data">
+              <span class="chip-icon">▥</span>
+              <span><b>Data</b><small>Discover. Decode. Decide.</small></span>
+            </div>
+
+            <div class="float-chip chip-dev">
+              <span class="chip-icon">⌘</span>
+              <span><b>Development</b><small>Imagine. Code. Create.</small></span>
+            </div>
+
+            <div class="art-caption">CURIOSITY IN. SOLUTIONS OUT.</div>
+          </div>
         </div>
+
+        <a class="scroll-cue" href="#about">
+          <span class="scroll-line" aria-hidden="true"></span>
+          SCROLL TO EXPLORE
+        </a>
       </section>
 
-      <section class="contact section-wrap section-pad" id="contact">
-        <div class="contact-panel">
-          <div class="section-label"><span>04</span> / CONTACT</div>
-          <div class="contact-grid">
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="section-label"><span>01</span> / ABOUT</div>
+
+          <div class="about-grid">
             <div>
               <h2>
-                Let’s make<br /><span class="gradient-text"
-                  >something useful.</span
+                A mind that Questions.<br />
+                <span class="muted">A mindset that Builds.</span>
+              </h2>
+              <div class="signal-container" aria-hidden="true">
+                <span class="signal-dot"></span>
+                <span class="signal-dot"></span>
+                <span class="signal-dot"></span>
+              </div>
+            </div>
+
+            <div class="about-copy">
+              <p class="large-copy">
+                I’m a CSE student building my foundation in software engineering
+                while exploring how data and AI can turn ideas into meaningful
+                solutions.
+              </p>
+              <p>
+                On the software side, I’m learning Java, data structures and
+                algorithms, web technologies, and Spring Boot. On the analytics
+                side, I’m exploring Python, SQL, Pandas, NumPy, and Power BI.
+              </p>
+              <p>
+                This portfolio documents what I learn, what I create, and how I
+                grow with every new challenge.
+              </p>
+              <a class="inline-link" href="#contact">
+                Have a project in mind? <span>Let’s connect ↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills section" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="section-label"><span>02</span> / TOOLKIT</div>
+              <h2>Skills in progress<span class="accent">.</span></h2>
+            </div>
+            <p>I’m focused on strong fundamentals first, then using them in real projects.</p>
+          </div>
+
+          <div class="skill-grid">
+            <article class="skill-card">
+              <span class="skill-number">01</span>
+              <div class="skill-icon" aria-hidden="true">⌘</div>
+              <h3>Software development</h3>
+              <p>Building programming skills, solving problems, and creating applications.</p>
+              <div class="tag-list">
+                <span class="tag tag-accent">Java</span>
+                <span class="tag tag-accent">DSA</span>
+                <span class="tag tag-accent">Spring Boot</span>
+                <span class="tag tag-accent">Git &amp; GitHub</span>
+                <span class="tag tag-accent">Postman</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <span class="skill-number">02</span>
+              <div class="skill-icon" aria-hidden="true">▥</div>
+              <h3>Data analytics</h3>
+              <p>Learning to clean and analyze data, query databases, and uncover meaningful insights.</p>
+              <div class="tag-list">
+                <span class="tag tag-accent">SQL</span>
+                <span class="tag tag-accent">Excel</span>
+                <span class="tag tag-accent">Power BI</span>
+                <span class="tag tag-accent">Pandas</span>
+                <span class="tag tag-accent">NumPy</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <span class="skill-number">03</span>
+              <div class="skill-icon" aria-hidden="true">✳</div>
+              <h3>Web foundations</h3>
+              <p>Creating accessible, responsive interfaces with a focus on clarity and usability.</p>
+              <div class="tag-list">
+                <span class="tag tag-accent">HTML</span>
+                <span class="tag tag-accent">CSS</span>
+                <span class="tag tag-accent">JavaScript</span>
+                <span class="tag tag-accent">Responsive UI</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="work section" id="work">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="section-label"><span>03</span> / SELECTED WORK</div>
+              <h2>Projects with a purpose<span class="accent">.</span></h2>
+            </div>
+            <p>A collection of projects, ideas, and lessons learned along the way.</p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-header">
+                <span class="project-category">WEB / UI</span>
+              </div>
+              <div class="project-body">
+                <h3>Tej Public School Website</h3>
+                <p>
+                  A school website designed to make information accessible,
+                  navigation simple, and the school’s identity welcoming.
+                </p>
+                <div class="tag-list">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <a
+                  class="project-link"
+                  href="https://github.com/huddaansh/Tej-Public-School-Demo-"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  View project ↗
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card exploring-card">
+              <h3>Currently exploring</h3>
+              <p>Building my skills in Python, SQL, and data visualization. Projects coming soon.</p>
+              <div class="progress-symbol" aria-hidden="true">📊</div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-header">
+                <span class="project-category">JAVA / API</span>
+              </div>
+              <div class="project-body">
+                <h3>Switchlyy</h3>
+                <p>
+                  A Java Spring Boot application for managing feature flags and
+                  controlling feature availability through REST APIs.
+                </p>
+                <div class="tag-list">
+                  <span class="tag">Java</span>
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">REST API</span>
+                </div>
+                <a
+                  class="project-link"
+                  href="https://github.com/huddaansh/Switchlyy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View project ↗
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div>
+              <div class="section-label"><span>04</span> / CONTACT</div>
+              <h2>
+                Let’s make<br />
+                <span class="gradient-text">something useful.</span>
               </h2>
               <p>
-                I’m open to connecting with fellow learners, discussing
-                projects, and exploring internship opportunities.
+                I’m open to connecting with fellow learners, discussing projects,
+                and exploring internship opportunities.
               </p>
             </div>
+
             <div class="contact-details">
               <span class="contact-kicker">FIND ME ONLINE</span>
               <a
+                class="contact-link"
                 href="https://github.com/huddaansh"
                 target="_blank"
                 rel="noopener noreferrer"
-                >GitHub <span>↗</span></a
               >
-
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
               <a
+                class="contact-link"
                 href="https://www.linkedin.com/in/anshhudda/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >LinkedIn <span>↗</span></a
               >
-
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
               <a
-                class="button button-primary contact-button"
+                class="button button-primary"
                 href="mailto:anshhudda1602@gmail.com?subject=Portfolio%20contact"
-                >Email me <span>↗</span></a
               >
+                Email me <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer section-wrap">
-      <a class="brand" href="#home"
-        ><span class="brand-mark">A.</span><span>ANSH HUDDA</span></a
-      >
-      <p>Designed with intent. Built while learning.</p>
-      <a class="back-top" href="#home">BACK TO TOP ↑</a>
-      <small>© <span id="year"></span> Ansh Hudda. Keep building.</small>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">A.</span>
+          <span>ANSH HUDDA</span>
+        </a>
+        <p>Designed with intent. Built while learning.</p>
+        <a class="back-to-top" href="#home">BACK TO TOP ↑</a>
+        <small>© <span id="year"></span> Ansh Hudda. Keep building.</small>
+      </div>
     </footer>
+
     <script src="script.js"></script>
-    <script>
-      const cards = document.querySelectorAll(".project-card");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      });
-      cards.forEach((card) => observer.observe(card));
-    </script>
-    
   </body>
 </html>
